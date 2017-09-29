@@ -4,6 +4,7 @@
 /* Global Style */
 body{
     background-color:#000;
+    margin:0;
 }
 
 div#container{
@@ -17,7 +18,11 @@ header{
     width:100%;
     height:150px;
     background-color:lightgreen;
-    border:2px dotted green;
+    background-image:url('/images/pumpkins.jpg');
+    background-position:top;
+    background-size:1100px;
+/*    background-repeat:repeat-x;*/
+    border:1px solid orange;
     margin:0;
     padding:0;
 }
@@ -27,14 +32,17 @@ header h1 {
     text-shadow: 1px 1px 1px #ffa500;
     text-align: center;
     margin-top:50px;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 50px;
 }
 nav{
     float:left;
     width:100%;
-    background-color:#000;
+    background-color:#654821;
     margin:0;
     padding:0;
     clear:both;
+    box-shadow:1px 1px 2px black;
 }
 
  nav ul{
@@ -84,9 +92,12 @@ footer{
     float:left;
     width:60%;
     color:brown;
-    text-shadow:1px 1px 1px lime 
+/*
+    text-shadow:1px 1px 1px black 
         ;
-    margin-left:10px
+*/
+    margin-left:0;
+    margin-bottom:0;
 }
 
 #imgMain{
@@ -107,11 +118,64 @@ footer{
 #p-main{
     width:640px;
     float:left;
+    margin-top:10px;
     
 }
 
+/* About.html */
+img#bob-pic{
+    width:500px;
+    margin:10px;
+    border:5px outset brown;
+    float:left;
+}
 
+h2#h2-about{
+    float:left;
+    margin-top:5px;
+    margin-bottom:0;
+}
 
+p#p-about{
+    float:left;
+    width:48%;
+    margin-top:10px;
+}
+/* produce.html */
+#gallery{
+    border:3px dotted green;
+    width:100%;
+    
+}
+
+figure{
+    border:2px brown outset;
+    box-shadow:1px 1px 10px #835d16;
+    background-color:burlywood;
+    width:250px;
+    float:left;
+    margin:10px 15px;
+    /* CSS Gradient 
+    background: #f6e6b4;
+    background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%);
+    background: -webkit-linear-gradient(top, #f6e6b4 0%,#ed9017 100%);
+    background: linear-gradient(to bottom, #f6e6b4 0%,#ed9017 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 );  */  
+}
+
+figure img{
+    display:block;
+    width:200px;
+    height:150px;
+    margin:10px auto;
+    border:2px inset brown;
+}
+
+figcaption{
+    text-align:center;
+    margin-bottom:10px;
+    font-family:sans-serif;
+}
 
 
 
