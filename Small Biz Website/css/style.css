@@ -5,6 +5,7 @@
 body{
     background-color:#000;
     margin:0;
+    font-family:sans-serif;
 }
 
 div#container{
@@ -50,6 +51,7 @@ nav{
     padding:0;
     list-style: none;
     color:white;
+     font-family:sans-serif;
 }
 
 nav ul li{
@@ -92,10 +94,12 @@ footer{
     float:left;
     width:60%;
     color:brown;
+    font-family:'Nosifer',sans-serif;
 /*
     text-shadow:1px 1px 1px black 
         ;
 */
+    margin-top:5px;
     margin-left:0;
     margin-bottom:0;
 }
