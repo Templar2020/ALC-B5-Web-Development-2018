@@ -75,7 +75,8 @@ nav .active{
 }
 
 #content{
-    width:100%    
+    width:100%;
+    height:auto;
 }
 
 .keepOpen{
@@ -147,6 +148,10 @@ p#p-about{
 }
 /* produce.html */
 #gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     border:3px dotted green;
     width:100%;
     
@@ -159,6 +164,7 @@ figure{
     width:250px;
     float:left;
     margin:10px 15px;
+    flex: 0 0 30%;
     /* CSS Gradient 
     background: #f6e6b4;
     background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%);
@@ -179,6 +185,30 @@ figcaption{
     text-align:center;
     margin-bottom:10px;
     font-family:sans-serif;
+}
+/* contact.html */
+h2#h2-contact{
+    margin:15px;
+   
+}
+form#form-contact{
+    margin-left:15px;
+    
+    
+}
+
+form input{
+    margin-bottom: 10px;
+    
+}
+
+form textarea{
+   clear:both; 
+    
+}
+
+button{
+        
 }
 
 
