@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Adventure Game</title>    
+</head>
+
+<body>
+    <script>
+        document.write("<h1 style='color:blue'>Adventure Game 1.0</h1>");
+        
+        var playerName = prompt("What is your name?");
+        
+        alert("good to meet you " + playerName +"!");
+        
+        var beginAdv = prompt("You awake from nap beneath a old apple tree in a beautiful  forest of green. There is a traveled path to the west. The dark forest to the east. A cave to the south. And misty mountains to the north. Which path do you take?").toLowerCase();
+        
+        if(beginAdv == "west"){
+            var path = prompt("The path is rough a rugged for miles. You see an old deserted castle in the distance to the north. Dense forests fence the way on both sides.").toLowerCase();
+            
+            if(path == "north"){
+               var castle = prompt("You enter the ruins of the castle through the broken and splintered door. It is dark and rubble rests on the worn and damp stone floor. Stairs go down to the basement. There is a dark doorway to the east.").toLowerCase();
+                
+                    if(castle == "stairs" || castle == "go down" || castle == "down"){
+                        var basement = prompt("You enter the basement. it is dark except for the faint glow of a torch at the end of a long hallway extending to the south.");
+                    }
+                    else if (castle == "east" || castle == "dark doorway"){
+                       alert("You come eye to eye with a ghostly wraith! The last thing you hear is your own scream! THE END!"); 
+                    }
+                    else{
+                        alert("You lose your footing and fall hitting your head on the stone floor. THE END!");
+                    }
+                
+            }
+            else{
+               alert("You stray from the path into the dark dense forest and disappear forever!"); 
+            }
+            
+        }
+        else if(beginAdv == "east"){
+            
+        }
+        else if(beginAdv == "south"){
+            
+        }
+        else if(beginAdv == "north"){
+            
+        }
+        else{
+            alert("I do not understand " + beginAdv);
+        }
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
