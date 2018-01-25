@@ -7,6 +7,9 @@
         <h1>Adventure Game v1.0</h1>
         <p>Made by: Mr Powell</p>
         <script>
+            var sword = 0;
+            
+            
             Start();
             
             function Start(){
@@ -27,29 +30,53 @@
             }
             
             function Village(){
-                var village = prompt("You arrive at a small village. There is a blacksmith, inn, stable and several wooden homes").toLowerCase();
+                var village = prompt("You arrive at a small village. There is a blacksmith, inn, stable and several wooden homes. There is also a path that leads out of town to the east and the west.").toLowerCase();
                 
                 switch(village){
                                           
                     case "blacksmith":
-                        alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.")
+                        alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.");
+                        var blacksmith = prompt ("buy sword");
+                        if(blacksmith == "buy sword"){
+                            alert("You bought a sword! congratulations!");
+                            sword ++;
+                            alert("swords = "+sword);
+                        }
+                        
+                        Village();
                     break;
                     case "inn":
                         alert("You enter the old weather torn inn. The innkeeper asks what he can do for you? Rent a room. Buy food. Sit by the hearth fire. ");
+                        Village();
                     break;    
                     case "stable":
                         alert("The stable master informs you that all of the horses have been stolen last night. He asks you for your help?");
+                        Village();
                     break;
+                    case "east":
+                        Forest();
+                    break;                        
+                    case "west":
+                        Mountains();
                     default:
                         alert("I do not understand " + village);
                         
                         Village();                    
                 }
+                                
+            }
+            
+            function Forest(){
+                var forestPath = prompt ("You have entered on the forest path which slithers through a forest of dense pine trees. You hear a wolf howl in the distance and the birds chirping in the trees. There is a tall pine tree with low branches just off the path. The path countinues east or back to the village.");
                 
-                
-                
+                if(forestPath == ""){
+                    
+                }
             }
           
+            function Mountains(){
+                
+            }
         
         </script>
     </body>
