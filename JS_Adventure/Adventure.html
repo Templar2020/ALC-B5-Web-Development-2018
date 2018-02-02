@@ -7,16 +7,32 @@
         <h1>Adventure Game v1.0</h1>
         <p>Made by: Mr Powell</p>
         <script>
-            var sword = 0;
+            // Inventory System
+           var inventory = {               
+               sword:0, 
+               bread:0,
+               meat:0,
+               fish:0,
+               goldkey:0,              
+           }
+           
+           var player = {
+               firstName:"",
+               lastName:"",
+               gender:"",
+               age:"",
+               height:"",
+               hairColor:"",              
+           }
             
             
             Start();
             
             function Start(){
                 
-                var playerName = prompt("What is your name traveller?");
+                player.firstName = prompt("What is your name traveller?");
                 
-                alert("Welcome to the land of yabba dabba doo, " + playerName);
+                alert("Welcome to the land of yabba dabba doo, " + player.firstName);
                 
                 var startGame = confirm("Are you ready to begin your adventure?");
                 
@@ -36,11 +52,11 @@
                                           
                     case "blacksmith":
                         alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.");
-                        var blacksmith = prompt ("buy sword");
+                        var blacksmith = prompt ("Do you want to buy a sword?");
                         if(blacksmith == "buy sword"){
                             alert("You bought a sword! congratulations!");
-                            sword ++;
-                            alert("swords = "+sword);
+                            inventory.sword ++;
+                            alert("swords = "+inventory.sword);
                         }
                         
                         Village();
@@ -67,11 +83,19 @@
             }
             
             function Forest(){
-                var forestPath = prompt ("You have entered on the forest path which slithers through a forest of dense pine trees. You hear a wolf howl in the distance and the birds chirping in the trees. There is a tall pine tree with low branches just off the path. The path countinues east or back to the village.");
+                var forestPath = prompt ("You have entered on the forest path which slithers through a forest of dense pine trees. You hear a wolf howl in the distance and the birds chirping in the trees. There is a tall pine tree with low branches just off the path. The path countinues east or back to the village.").toLowerCase();
                 
-                if(forestPath == ""){
+                if(forestPath == "climb" || forestPath == "climb tree" || forestPath == "climb pine tree"){
+                    var pinetree = prompt("You climb up the large tree until you cannot climb any higher. You see a robins nest that has a few eggs in it and a golden key");
+                        
+                        if(pinetree == "take key" || pinetree == "get golden key" || pinetree == "get key" ||pinetree == "take golden key" ){
+                            alert("you pick up the golden key and put in your sack and descend down the tree to the path.");
+                            inventory.goldkey ++;
+                            Forest();
+                        }
                     
                 }
+            
             }
           
             function Mountains(){
@@ -81,3 +105,33 @@
         </script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
